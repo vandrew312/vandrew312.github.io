@@ -1,6 +1,5 @@
 User-agent: Yandex 
 Disallow: /js/
-Host: http://ssb-nsk.ru
 Sitemap: http://ssb-nsk.ru/sitemap.xml
 
 User-agent: *
