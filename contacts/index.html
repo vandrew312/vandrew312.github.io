@@ -2,10 +2,15 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Обслуживание пожарной сигнализации в Новосибирске.</title>
-<meta name="description" content="Обслуживание пожарной сигнализации в Новосибирске.">
-<meta name="keywords" content="обслуживание пожарной сигнализации, ремонт пожарной сигнализации, сервис пожарной сигнализации">
-	
+<title>Контакты</title>
+<meta name="description" content="Контакты">
+<meta name="keywords" content="контакты, адрес, телефон">
+<script src="/js/free_validation.js"></script>
+<script>
+	required.add2('Full_Name','NAME','Поле "Имя"');		// NAME 2-30 БУКВ
+	required.add2('Email_Address','EMAIL','Поле "E-mail"'); 
+	required.add2('Your_Message','TEXT','Поле "Текст сообщения"');  // TEXT 2-2000 символов
+	</script>	
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<meta name="viewport" content="width=640">-->
@@ -25,6 +30,7 @@
 <![endif]-->
 
 
+
 </head>
 
 <body id="body" >
@@ -35,7 +41,6 @@
 <a href="#body"><span></span>Наверх</a>
 </p>
 </div>
-
 
 
  <!--LiveInternet counter--><script type="text/javascript"><!--
@@ -100,9 +105,8 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 			<a href="/"><img src="/images/logo.png" alt="logo"  /></a>
 		</div> 
 		<div class="nav">
-	
-	
-	
+
+		
 		</div>
 	</div>  <!--.header-->
 	<div id="promo">	
@@ -128,26 +132,36 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 				<li ><a href="/"><span>Главная</span></a></li>
 				<li ><a href="/proekt/"><span>Проектирование</span></a></li>
 				<li ><a href="/montaj/"><span>Монтаж</span></a></li>
-				<li class="current-menu-item"><a href="/obsluj/"><span>Обслуживание</span></a></li>
-				<li ><a href="/contacts/"><span>Контакты</span></a></li>
+				<li ><a href="/obsluj/"><span>Обслуживание</span></a></li>
+				<li class="current-menu-item"><a href="/contacts/"><span>Контакты</span></a></li>
 			</ul>	
 	</div>	
   </nav> 
  </div>	<!--.header_sub-head-->
 <div class="content_and_side">
-<div class="content"><div class="content-margin">
-  <h1>Обслуживание пожарной сигнализации</h1>
-  <p>Мы занимаемся ремонтом и <strong>обслуживанием пожарной сигнализации</strong>. Возможен как <b>разовый выезд</b>, так и заключение договора на <b>постоянное обслуживание</b>.</p>
-	<p><img src="/images/obsluj.jpg" alt="обслуживание пожарной сигнализации" title="обслуживание пожарной сигнализации" width="668" ></p>
-
-  </div>  <!--end content-margin -->	
-</div>
-	<div class="sidebar"> 
-		<p style="font-size:20px; margin-top:10px;"><b>Статьи:</b></p>
-<p style="margin-top:10px;">30.01.2017</p>
-<p><a href="/articles/prichina_lojnyh_srabotok/">Как определить причину ложных срабатываний пожарной сигнализации?</a></p>
-<p style="margin-top:10px;">10.08.2016</p>
-<p><a href="/articles/zachem_i_kak_obsluj/">Зачем и как обслуживать пожарную сигнализацию?</a></p>
+	<div class="content contacts" id="contacts">
+		<div class="form-sent-message">
+		  <h2>Написать сообщение</h2>
+			  
+				<form name="contactformfree" method="post" action="free_process.php" onSubmit="return validate.check(this, 0, 2)">
+					<p>Имя<span>*</span></p>
+					<input class="input-sent-message" type="text" name="Full_Name" id="Full_Name" maxlength="30" required="">
+					<p>E-mail<span>*</span></p>
+					<input class="input-sent-message" type="text" name="Email_Address" id="Email_Address" maxlength="40" required="">
+					<p>Телефон</p>
+					<input class="input-sent-message" type="text" name="Telephone_Number" id="Telephone_Number" maxlength="13">
+					<p>Текст сообщения<span>*</span></p>
+					<textarea cols="54" rows="12" name="Your_Message" id="Your_Message" maxlength="2000" required=""></textarea>
+					<p>Поля помеченные <span>*</span> обязательны для заполнения</p>
+					<input class="button" value="Отправить" type="submit">
+				</form>
+		</div>
+	</div>
+	<div class="contacts-sidebar"> 
+		<h1>Контакты</h1>
+			<div class="contacts-data">
+				<iframe src="https://yandex.ru/map-widget/v1/-/CBQGrEFowC"  frameborder="0" style="width:100%;height:100%;"></iframe>
+			</div>
 	</div>
 </div>	<!-- End content_and_side-->
 
@@ -178,7 +192,7 @@ window.onload = function () {
 
 			$(".banner a").click(function(){
 				var clickbanner=$(this).attr('data-ref');
-				
+
 			});
 			
 		});
